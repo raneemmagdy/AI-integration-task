@@ -38,6 +38,9 @@ app.post("/api/generate", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch AI response" });
   }
 });
+app.get('/',(req,res,next)=>{
+    res.status(200).json({message:'Welcome To Ai Api'})
+})
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
